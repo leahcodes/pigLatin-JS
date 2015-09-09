@@ -19,17 +19,14 @@ var pigLatin = function(word) {
   }
 };
 
+$(document).ready(function() {
+  $("form#pig-latin").submit(function(event) {
+    var word = ($("input#word").val());
+    var result = pigLatin(word);
 
+    $(".pig-latined").text(result);
 
-
-// else {
-//   var wordToArray = word.split("");
-//   var letters = [];
-//   wordToArray.forEach(function(letter) {
-//     do  {
-//       letters.push(letter);
-//     }
-//     while ((vowels.indexOf(letter)) < 0);
-//   });
-//   return letters.join();
-// }
+    $("#result").show();
+    event.preventDefault();
+  });
+});
