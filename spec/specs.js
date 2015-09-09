@@ -22,14 +22,17 @@ describe('pigLatin', function() {
 //   });
 // });
 
-describe('pigLatin', function() {
-  it("cuts the first consecutive consonants of a word, adds consonants to the end, and adds ay", function() {
-    expect(pigLatin("cream")).to.equal("eamcray");
-  });
-});
+// describe('pigLatin', function() {
+//   it("cuts the first consecutive consonants of a word, adds consonants to the end, and adds ay", function() {
+//     expect(pigLatin("cream")).to.equal("eamcray");
+//   });
+// });
 
 describe('pigLatin', function() {
-  it("cuts the first consecutive consonants of a word, adds consonants to the end, and adds ay", function() {
+  it("cuts the first consecutive consonants of a word up to 4 consonants, adds consonants to the end, and adds ay", function() {
     expect(pigLatin("banana")).to.equal("ananabay");
+    expect(pigLatin("cream")).to.equal("eamcray");
+    expect(pigLatin("string")).to.equal("ingstray");
+    expect(pigLatin("dyson")).to.equal("ysonday");
   });
 });
