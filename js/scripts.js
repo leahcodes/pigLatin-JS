@@ -4,9 +4,11 @@ var pigLatin = function(word) {
     var wordAy = word.concat("ay");
     return wordAy;
 } else if (vowels.indexOf((word.charAt(0))) < 0 && vowels.indexOf((word.charAt(1))) < 0) {
-    return word.slice(2);
+    var wordNew = (word.slice(2)).concat(word.charAt(0)).concat(word.charAt(1)).concat("ay");
+    return wordNew;
 } else if (vowels.indexOf((word.charAt(0))) < 0) {
-    return word.slice(1);
+    var wordNew1 = (word.slice(1)).concat(word.charAt(0)).concat("ay");
+    return wordNew1;
   }
 };
 
