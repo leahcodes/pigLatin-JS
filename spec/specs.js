@@ -36,3 +36,9 @@ describe('pigLatin', function() {
     expect(pigLatin("dyson")).to.equal("ysonday");
   });
 });
+
+describe('pigLatin', function() {
+  it("works for multiple words", function() {
+    expect(pigLatin("banana and a banana")).to.equal("ananabay anday aay ananabay");
+  });
+});
